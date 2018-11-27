@@ -1,0 +1,32 @@
+{
+  "name": "webcomp-starter-kit",
+  "version": "1.0.0",
+  "description": "A webcomponent starter kit that contains everything you need to direct code your webcomp and not take 2 days for the setup...",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "start": "webpack-dev-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ylerjen/webcomp-starter-kit.git"
+  },
+  "keywords": [
+    "webcomponent",
+    "starter-kit",
+    "shadow-dom",
+    "custom-element"
+  ],
+  "author": "Yann Lerjen <ylerjen@vaudoise.ch>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ylerjen/webcomp-starter-kit/issues"
+  },
+  "homepage": "https://github.com/ylerjen/webcomp-starter-kit#readme",
+  "devDependencies": {
+    "webpack": "^4.26.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
+  }
+}
