@@ -4,7 +4,7 @@
     "description": "A webcomponent starter kit that contains everything you need to direct code your webcomp and not take 2 days for the setup...",
     "main": "index.js",
     "scripts": {
-        "test": "karma",
+        "test": "npm run build && karma",
         "build": "npm run clean && webpack",
         "start": "webpack-dev-server",
         "clean": "rimraf dist"
