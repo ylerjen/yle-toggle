@@ -17,5 +17,14 @@ module.exports = {
       new CopyWebpackPlugin([
         { from: 'src/index.html' },
       ])
+    ],
+    module: {
+        rules: [
+            {
+                test: /\.html$/,
+                exclude: /node_modules/,
+                use: {loader: 'html-loader'}
+            }
   ]
+    }
 };
