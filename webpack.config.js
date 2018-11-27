@@ -4,6 +4,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 module.exports = {
     mode: 'development',
     entry: './src/index.js',
+    devtool: 'source-map',
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js'
@@ -35,6 +36,21 @@ module.exports = {
                 test: /\.html$/,
                 exclude: /node_modules/,
                 use: {loader: 'html-loader'}
+            }, {
+                test: /\.scss$/,
+                use: [
+                    {
+                        loader: "css-loader", // translates CSS into CommonJS
+                        options: {
+                            sourceMap: true
+                        }
+                    }, {
+                        loader: "sass-loader", // compiles Sass to CSS, using Node Sass by default     
+                        options: {
+                            sourceMap: true
+                        }           
+                    }
+                ]
             }
         ]
     }
