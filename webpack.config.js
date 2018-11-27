@@ -1,4 +1,5 @@
 const path = require('path');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: './src/index.js',
@@ -11,5 +12,10 @@ module.exports = {
     compress: true,
     port: 9000,
     watchContentBase: true
-  }
+  },
+  plugins: [
+      new CopyWebpackPlugin([
+        { from: 'src/index.html', to: '' },
+      ])
+  ]
 };
