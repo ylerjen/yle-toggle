@@ -17,6 +17,7 @@ module.exports = {
     plugins: [
         new CopyWebpackPlugin([
             { from: 'src/index.html' },
+            { from: 'node_modules/document-register-element/build/document-register-element.js', to: 'vendor'}
         ])
     ],
     module: {
