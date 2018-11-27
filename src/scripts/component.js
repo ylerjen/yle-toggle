@@ -15,7 +15,7 @@ function createTemplate() {
 export class ChangeMe extends HTMLElement {
     /**
      * @static
-     * 
+     * Returns a list of observed attributes
      */
     static get observedAttributes() { return []; }
 
@@ -40,6 +40,7 @@ export class ChangeMe extends HTMLElement {
     connectedCallback() {
 
     }
+
     /**
      * Called every time the element is removed from the DOM.
      * Useful for running clean up code.
@@ -47,6 +48,7 @@ export class ChangeMe extends HTMLElement {
     disconnectedCallback() {
 
     }
+
     /**
      * Called when an observed attribute listed in the "static observedAttributes" has been added, removed, updated, or replaced
      * @param {string} attrName - the name of the attribute that changed
@@ -57,11 +59,15 @@ export class ChangeMe extends HTMLElement {
     attributeChangedCallback(attrName, oldVal, newVal) {
 
     }
+
+    get dummy() {
+        return 'woot';
+    }
 }
   
 export function defineCustomElement() {
     // define the web component for a standard HTMLElement extension
-    customElements.define('web-component', ChangeMe);
+    customElements.define('change-me', ChangeMe);
     
     // but if you extend a specific element like HTMLButtonElement you'll need the following declaration instead.
     // customElements.define('change-me', ChangeMe, {extends: 'button'});
