@@ -6,8 +6,11 @@ export class WebComponent extends HTMLElement {
         console.log(template, content);
         const shadowRoot = this.attachShadow({mode: 'open'});
         shadowRoot.appendChild(content.cloneNode(true));*/
-        this.innerHTML = '<h1>Coucou</h1>';
+        this.innerHTML = '<h1>I\'m your Web-Component.</h1><p>Change me in <code>src/scripts/component.js</code></p>';
     }
 }
-customElements.define('web-component', WebComponent);
   
+
+export function defineCustomElement() {
+    customElements.define('web-component', WebComponent);
+}
