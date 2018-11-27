@@ -22,6 +22,14 @@ Specify the extended tagname in the definition of the custom element like
 
 ## Development
 
+### Steps to create your own WebComponent
+1. Clone this repository
+1. Change the git origin repo to your own
+1. Adapt ```package.json``` according to your WebComponent
+1. Rename the class in the ```scripts/component.js```
+1. Adapt the ```CustomElements.define``` in the ```scripts/component.js```
+1. Happy coding
+
 ### Extending HTMLElement VS extending specific Elements
 The default code is oriented for a HTMLElement extension. This the case when you don't need to extend a specific existing component, but just want to create your custom one.
 In the case you want to extend a specific HTMLElement like HTMLButtonElement, HTMLInputElement,... you'll need to modify the ```scripts/component.js``` with the following changes :
